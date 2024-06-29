@@ -1,5 +1,9 @@
+import "./Header.css"
+
 function Header (){
-    return <img src ="/img/header-banner.png" alt ="banner header, persona mirando una laptop"/>
+    return <header className="header">
+        <img src ="/img/header-banner.png" alt ="banner header, persona mirando una laptop"/>
+        </header>
 }
 
 export default Header
