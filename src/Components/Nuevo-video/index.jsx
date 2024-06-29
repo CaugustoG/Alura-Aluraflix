@@ -1,4 +1,4 @@
-import "./Nuevo-video.css"
+import "./NuevoVideo.css"
 
 const NuevoVideo = ()=>{
     return <section className="nuevo-video">
