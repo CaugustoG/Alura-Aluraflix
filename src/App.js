@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import header from "./Components/Header/Header.jsx"
+import Header from "./Components/Header/Header.jsx"
 
 function App() {
   return (
     <div className="App">
-      
+      <Header/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
