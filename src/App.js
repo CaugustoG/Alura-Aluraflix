@@ -1,7 +1,7 @@
 
 import './App.css';
-import Header from "./Components/Header/Header.jsx"
-import NuevoVideo from './Components/Nuevo-video/Nuevo-video.jsx';
+import Header from "./Components/Header"
+import NuevoVideo from './Components/Nuevo-video';
 
 
 function App() {
