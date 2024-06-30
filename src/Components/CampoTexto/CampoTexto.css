@@ -23,4 +23,5 @@
     outline-color: #afb1bb;
     border-radius: 5px;
     font : 16px;
+    box-sizing: border-box;
 }

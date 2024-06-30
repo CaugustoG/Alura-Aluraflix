@@ -1,11 +1,17 @@
 import "./ListaOpciones.css";
 
 const ListaOpciones = () =>{
-    return <div>
+    return <div className="lista-opciones">
         <label>Categoría</label>
-        <section>
-
-        </section>
+        <select>
+            <option>Programación</option>
+            <option>Front End</option>
+            <option>Data Science</option>
+            <option>Devops</option>
+            <option>UX / UI</option>
+            <option>Móvil</option>
+            <option>Innovación y Gestión</option>
+        </select>
     </div>
 }
 
