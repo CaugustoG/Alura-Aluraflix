@@ -11,9 +11,12 @@
     background-color: #262626;
     box-shadow: 7px 7px 17px rgba(0,0,0,0.2);
     border-radius: 20px;
-    padding: 8px 100px;
+    padding: 16px 20%;
+    box-sizing: border-box;
 }
 
 .nuevo-video h2 {
     color: #ffffff;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
 }

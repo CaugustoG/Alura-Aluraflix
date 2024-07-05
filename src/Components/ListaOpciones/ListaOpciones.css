@@ -10,7 +10,7 @@
     font-size: 18px;
     display: block;
     color: #ffffff;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .lista-opciones select {
@@ -18,7 +18,7 @@
     background-color: #1d1c1c;
     box-shadow: 10px 10px 30px rgba(0. 0. 0. 0.1);
     border: 1px;
-    padding: 30px 20px;
+    padding: 24px 16px;
     color:#ffffff;
     outline-color: #afb1bb;
     border-radius: 5px;
