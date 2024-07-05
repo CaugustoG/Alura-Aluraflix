@@ -11,23 +11,22 @@ const NuevoVideo = () => {
     const [imagen, actualizarImagen] = useState("")
     const [video, actualizarVideo] = useState("")
     const [descripcion, actualizarDescripcion] = useState("")
-    //const [categoria, actualizarCategoria] = useState("")
+    const [categoria, actualizarCategoria] = useState("")
 
     const manejarEnvio = (e) => {
-        
-        e.preventDefault()
-        console.log("manejar envio", e)
 
+        e.preventDefault()
+        // console.log("manejar envio", e)
+        // datosAEnviar es un objeto que captura los estados generados
         const datosAEnviar = {
             titulo,
             imagen,
             video,
-            descripcion
+            descripcion,
+            categoria
         }
         console.log("datos a enviar", datosAEnviar)
     }
-
-
 
     return <section className="nuevo-video">
         <form onSubmit={manejarEnvio}>
@@ -42,6 +41,8 @@ const NuevoVideo = () => {
             />
             <ListaOpciones
                 required
+                valor={categoria}
+                actualizarCategoria={actualizarCategoria}
 
             />
             <CampoTexto
