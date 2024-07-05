@@ -5,7 +5,7 @@ import ListaOpciones from "../ListaOpciones/Index"
 import Boton from "../Boton"
 import TituloSeccion from "../TituloSeccion"
 
-const NuevoVideo = () => {
+const NuevoVideo = (props) => {
 
     const [titulo, actualizarTitulo] = useState("")
     const [imagen, actualizarImagen] = useState("")
@@ -43,7 +43,7 @@ const NuevoVideo = () => {
                 required
                 valor={categoria}
                 actualizarCategoria={actualizarCategoria}
-
+                categorias={props.categorias}
             />
             <CampoTexto
                 titulo="Imagen"
