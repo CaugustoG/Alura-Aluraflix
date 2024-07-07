@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    background-position: center;
+    justify-content: space-around;
+    color: #2a2525;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.footer .logo{
+    width: 160px;
+}
