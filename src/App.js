@@ -1,9 +1,18 @@
+import { useState } from "react";
+
 import "./App.css";
 import Header from "./Components/Header";
 import NuevoVideo from "./Components/Nuevo-video";
 import Categoria from "./Components/Categoria";
 
 function App() {
+  //HOOKS
+  const [videos, actualizarVideos] = useState([]);
+
+  const registrarVideo = (video) => {
+    console.log("registrar video", registrarVideo);
+    actualizarVideos([...videos, video]);
+  };
   //lisata de categorias
   const categorias = [
     {
@@ -23,7 +32,9 @@ function App() {
   return (
     <div /*className='app'*/>
       <Header />
-      <NuevoVideo categorias={categorias.map((categoria) => categoria.titulo)}
+      <NuevoVideo
+        categorias={categorias.map((categoria) => categoria.titulo)}
+        actualizarVideos={actualizarVideos}
       />
       {categorias.map((categoria) => {
         return <Categoria datos={categoria} key={categoria.titulo} />;

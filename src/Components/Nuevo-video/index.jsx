@@ -1,10 +1,11 @@
 import { useState } from "react"
 import "./NuevoVideo.css"
+import TituloSeccion from "../TituloSeccion"
 import CampoTexto from "../CampoTexto"
 import ListaOpciones from "../ListaOpciones/Index"
 import Boton from "../Boton"
-import TituloSeccion from "../TituloSeccion"
 
+// Componente Nuevo-video es un formulario para agregar video nuevo a la lista
 const NuevoVideo = (props) => {
 
     const [titulo, actualizarTitulo] = useState("")
@@ -12,6 +13,9 @@ const NuevoVideo = (props) => {
     const [video, actualizarVideo] = useState("")
     const [descripcion, actualizarDescripcion] = useState("")
     const [categoria, actualizarCategoria] = useState("")
+
+    //destructuracion
+    const { actualizarVideos } = props
 
     const manejarEnvio = (e) => {
 
@@ -25,12 +29,12 @@ const NuevoVideo = (props) => {
             descripcion,
             categoria
         }
-        console.log("datos a enviar", datosAEnviar)
+        actualizarVideos(datosAEnviar)
     }
 
     return <section className="nuevo-video">
         <form onSubmit={manejarEnvio}>
-            <TituloSeccion />
+            <TituloSeccion/>
             <h2>Crear card</h2>
             <CampoTexto
                 titulo="Titulo"
