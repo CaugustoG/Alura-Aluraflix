@@ -14,7 +14,7 @@ const Categoria = (props) => {
     return <section className="categoria">
         <h3 style={estiloTitulo}>{titulo}</h3>
         <div className="colaboradores">
-            
+           
         </div>
     </section>
 }
