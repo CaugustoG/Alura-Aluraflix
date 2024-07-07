@@ -34,13 +34,14 @@ function App() {
   return (
     <div /*className='app'*/>
       <Header />
+      
+      {categorias.map((categoria) => {
+        return <Categoria datos={categoria} key={categoria.titulo} />;
+      })}
       <NuevoVideo
         categorias={categorias.map((categoria) => categoria.titulo)}
         actualizarVideos={actualizarVideos}
       />
-      {categorias.map((categoria) => {
-        return <Categoria datos={categoria} key={categoria.titulo} />;
-      })}
       <Footer/>
     </div>
   );

@@ -34,44 +34,49 @@ const NuevoVideo = (props) => {
 
     return <section className="nuevo-video">
         <form onSubmit={manejarEnvio}>
-            <TituloSeccion/>
+            <TituloSeccion />
             <h2>Crear card</h2>
-            <CampoTexto
-                titulo="Titulo"
-                placeholder="Ingrese el titulo"
-                required
-                valor={titulo}
-                actualizarValor={actualizarTitulo}
-            />
-            <ListaOpciones
-                required
-                valor={categoria}
-                actualizarCategoria={actualizarCategoria}
-                categorias={props.categorias}
-            />
-            <CampoTexto
-                titulo="Imagen"
-                placeholder="Ingrega el enlace de la imagen"
-                required
-                valor={imagen}
-                actualizarValor={actualizarImagen}
-            />
-            <CampoTexto
-                titulo="Video"
-                placeholder="Ingrega el enlace del video"
-                required
-                valor={video}
-                actualizarValor={actualizarVideo}
-            />
-            <CampoTexto
-                titulo="Descripción"
-                placeholder="¿de qué se trata el video?"
-                required
-                valor={descripcion}
-                actualizarValor={actualizarDescripcion}
-            />
-            <Boton texto="Guardar" />
-            <Boton texto="Limpiar" />
+            <div className="campos">
+                <CampoTexto
+                    titulo="Titulo"
+                    placeholder="Ingrese el titulo"
+                    required
+                    valor={titulo}
+                    actualizarValor={actualizarTitulo}
+                />
+                <ListaOpciones
+                    required
+                    valor={categoria}
+                    actualizarCategoria={actualizarCategoria}
+                    categorias={props.categorias}
+                />
+                <CampoTexto
+                    titulo="Imagen"
+                    placeholder="Ingrega el enlace de la imagen"
+                    required
+                    valor={imagen}
+                    actualizarValor={actualizarImagen}
+                />
+                <CampoTexto
+                    titulo="Video"
+                    placeholder="Ingrega el enlace del video"
+                    required
+                    valor={video}
+                    actualizarValor={actualizarVideo}
+                />
+                <CampoTexto
+                    titulo="Descripción"
+                    placeholder="¿de qué se trata el video?"
+                    required
+                    valor={descripcion}
+                    actualizarValor={actualizarDescripcion}
+                />
+            </div>
+            <div className="btn">
+                <Boton texto="Guardar" />
+                <Boton texto="Limpiar" />
+            </div>
+
         </form>
     </section>
 }
