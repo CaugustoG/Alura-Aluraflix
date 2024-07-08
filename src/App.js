@@ -247,6 +247,7 @@ function App() {
             </div>
           }
         />
+        <Route path="*" element={<h1>Error 404, la página no existe</h1>}/>
       </Routes>
     </Router>
   );
