@@ -3,7 +3,7 @@ import "./Cards.css"
 
 const Cards = (props) => {
 
-    const {categoria, foto, nombre, id }= props.datos
+    const {categoria, imagen, nombre, id }= props.datos
     const {eliminarCard} = props
 
 
@@ -11,7 +11,7 @@ const Cards = (props) => {
         <div className="miniatura">
             <div>
                 <div>{nombre}</div>
-                <img src={foto} alt={nombre} />
+                <img src={imagen} alt={nombre} />
                 
             </div>
         </div>

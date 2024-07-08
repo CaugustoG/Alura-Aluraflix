@@ -8,13 +8,13 @@ import Boton from "../Boton"
 // Componente Nuevo-video es un formulario para agregar video nuevo a la lista
 const NuevoVideo = (props) => {
     //formulario nuevo-video ---
-    const [titulo, actualizarTitulo] = useState("")
+    const [nombre, actualizarNombre] = useState("")
     const [imagen, actualizarImagen] = useState("")
     const [video, actualizarVideo] = useState("")
     const [descripcion, actualizarDescripcion] = useState("")
     const [categoria, actualizarCategoria] = useState("")
     //cormulario crear categoria---
-    const [nombre, actualizarNombre] = useState("")
+    const [titulo, actualizarTitulo] = useState("")
 
     //destructuracion
     const { registrarCards, nuevaCategoria, crearCategoria } = props
@@ -35,8 +35,8 @@ const NuevoVideo = (props) => {
 
     const manejarNuevaCategoria = (e)=> {
         e.preventDefault()
-        console.log("nueva categoria", categoria)
-        crearCategoria("nueva categoria", categoria)
+        console.log("nueva categoria:", {titulo})
+        crearCategoria({titulo})
     }
 
     return <section className="nuevo-video">
@@ -48,8 +48,8 @@ const NuevoVideo = (props) => {
                     titulo="Titulo"
                     placeholder="Ingrese el titulo"
                     required
-                    valor={titulo}
-                    actualizarValor={actualizarTitulo}
+                    valor={nombre}
+                    actualizarValor={actualizarNombre}
                 />
                 <ListaOpciones
                     required
@@ -91,8 +91,8 @@ const NuevoVideo = (props) => {
                     titulo="Categoría"
                     placeholder="Ingrese la categoría"
                     required
-                    valor={nombre}
-                    actualizarValor={actualizarNombre}
+                    valor={titulo}
+                    actualizarValor={actualizarTitulo}
                     crearCategoria={crearCategoria}
                 />
             </div>
