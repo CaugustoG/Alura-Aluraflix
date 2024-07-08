@@ -7,29 +7,36 @@ import Boton from "../Boton"
 
 // Componente Nuevo-video es un formulario para agregar video nuevo a la lista
 const NuevoVideo = (props) => {
-
+    //formulario nuevo-video ---
     const [titulo, actualizarTitulo] = useState("")
     const [imagen, actualizarImagen] = useState("")
     const [video, actualizarVideo] = useState("")
     const [descripcion, actualizarDescripcion] = useState("")
     const [categoria, actualizarCategoria] = useState("")
+    //cormulario crear categoria---
+    const [nombre, actualizarNombre] = useState("")
 
     //destructuracion
-    const { actualizarVideos } = props
+    const { registrarCards, nuevaCategoria, crearCategoria } = props
 
     const manejarEnvio = (e) => {
-
         e.preventDefault()
-        // console.log("manejar envio", e)
+        console.log("manejar envio", e)
         // datosAEnviar es un objeto que captura los estados generados
-        const datosAEnviar = {
+        let datosAEnviar = {
             titulo,
             imagen,
             video,
             descripcion,
             categoria
         }
-        actualizarVideos(datosAEnviar)
+        props.registrarCard(datosAEnviar) 
+    }
+
+    const manejarNuevaCategoria = (e)=> {
+        e.preventDefault()
+        console.log("nueva categoria", categoria)
+        crearCategoria("nueva categoria", categoria)
     }
 
     return <section className="nuevo-video">
@@ -76,7 +83,22 @@ const NuevoVideo = (props) => {
                 <Boton texto="Guardar" />
                 <Boton texto="Limpiar" />
             </div>
-
+        </form>
+        <form onSubmit={manejarNuevaCategoria}>
+            <h2>Crear categoría</h2>
+            <div className="campos">
+                <CampoTexto
+                    titulo="Categoría"
+                    placeholder="Ingrese la categoría"
+                    required
+                    valor={nombre}
+                    actualizarValor={actualizarNombre}
+                    crearCategoria={crearCategoria}
+                />
+            </div>
+            <div className="btn">
+                <Boton texto="Crear categoría" />
+            </div>
         </form>
     </section>
 }

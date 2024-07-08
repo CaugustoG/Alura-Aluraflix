@@ -3,17 +3,21 @@ import "./Cards.css"
 
 const Cards = (props) => {
 
-    const { titulo, imagen, } = props.datos
+    const {categoria, foto, nombre, id }= props.datos
+    const {eliminarCard} = props
 
 
     return <div className="Card">
         <div className="miniatura">
-            <img src={imagen} alt={titulo} />
-            <div>{titulo}</div>
+            <div>
+                <div>{nombre}</div>
+                <img src={foto} alt={nombre} />
+                
+            </div>
         </div>
         <div className="info">
-            <div className="accion">
-                <img src="/img/VectorBorrar.png" alt="borrar" />
+            <div className="accion" onClick={() =>eliminarCard(id)}>
+                <img src={"/img/VectorBorrar.png"} alt="borrar" />
                 <h4>BORRAR</h4>
             </div>
             <div className="accion" >
@@ -23,5 +27,6 @@ const Cards = (props) => {
         </div>
     </div>
 }
+
 
 export default Cards

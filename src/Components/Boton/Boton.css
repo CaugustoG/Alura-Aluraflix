@@ -1,9 +1,10 @@
 .boton {
     background-color: #9c1e1e;
     border-radius: 10px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     font-family: "Montserrat", sans-serif;
-    padding: 24px 64px;
+    padding: 18px 60px;
     border: none;
     color: #ffffff;
     margin: 32px 20px;

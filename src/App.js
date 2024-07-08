@@ -1,93 +1,167 @@
+//IMPORT LIBRERIAS REACT---//------------------------------------------
 import { useState } from "react";
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from "uuid"
+//IMPORT CSS---//------------------------------------------
 import "./App.css";
+//IMPORT COMPONENTS ---//------------------------------------------
 import Header from "./Components/Header";
 import NuevoVideo from "./Components/Nuevo-video";
 import Categoria from "./Components/Categoria";
 import Footer from "./Components/Footer";
-
+//------------------------------------------
 function App() {
-  //HOOKS actualizar video
-  const [Cards, actualizarCards] = useState([
+
+
+
+  //HOOKS ---//------------------------------------------
+  //Listas cards
+  const [cards, actualizarCards] = useState([
     {
-      categoria: "Nordico",
-      foto: "https://img.freepik.com/foto-gratis/delicioso-festival-comida-callejera_23-2151543555.jpg?t=st=1720367052~exp=1720370652~hmac=820e9a2b8f7a920d92210d88b0a25e8bbed867d745addd138f69ae01aad1f194&w=996",
+      id:uuid(),
+      categoria: "Nórdico",
+      foto: "https://img.freepik.com/foto-gratis/delicioso-festival-comida-callejera_23-2151543555.jpg",
       nombre: "Noruega",
-      puesto: "Instructor",
       fav: true,
     },
     {
-      categoria: "Mediteraneo",
-      foto: "https://img.freepik.com/foto-gratis/bonifacio-comuna-francia_181624-5380.jpg?t=st=1720376321~exp=1720379921~hmac=cb8842e499fd3ac28b7833494c6bf77924cd508070af2d58c6d0a58e59f4f0e9&w=996",
+      id:uuid(),
+      categoria: "Selva",
+      foto: "https://img.freepik.com/foto-gratis/corriente-agua-limpia-que-fluye-traves-selva-tropical-daintree-queensland-australia_181624-48016.jpg",
+      nombre: "Darien",
+      fav: true,
+    },
+    {
+      id:uuid(),
+      categoria: "Montaña",
+      foto: "https://img.freepik.com/foto-gratis/tiro-enfoque-superficial-ramas-arboles-telarana-hermosa-vista-paisaje-brumoso-detras_181624-48082.jpg",
+      nombre: "chile",
+      fav: true,
+    },
+    {
+      id:uuid(),
+      categoria: "Llanuras",
+      foto: "https://img.freepik.com/foto-gratis/odenwald-manana-brumosa_181624-29338.jpg",
+      nombre: "Meta",
+      fav: true,
+    },
+    {
+      id:uuid(),
+      categoria: "Selva",
+      foto: "https://img.freepik.com/foto-gratis/impresionante-toma-pequena-cascada-bosque-sol-brillando-traves-arboles_181624-8392.jpg",
+      nombre: "Mexico",
+      fav: true,
+    },
+    {
+      id:uuid(),
+      categoria: "Mediterraneo",
+      foto: "https://img.freepik.com/foto-gratis/bonifacio-comuna-francia_181624-5380.jpg",
       nombre: "Mar mediterraneo",
-      puesto: "Diseño UI",
       fav: false,
     },
     {
+      id:uuid(),
+      categoria: "Mediterraneo",
+      foto: "https://img.freepik.com/foto-gratis/paisaje-mar-rodeado-montanas-edificios-playas-cielo-azul-nublado-grecia_181624-7981.jpg",
+      nombre: "Santorini",
+      fav: false,
+    },
+    {
+      id:uuid(),
       categoria: "Montaña",
-      foto: "https://img.freepik.com/foto-gratis/vestrahorn_181624-24633.jpg?t=st=1720367049~exp=1720370649~hmac=7ec974420706fbc321a1c0c2da631ccafe261849b10c2ba26cacb05a084f2e73&w=996",
+      foto: "https://img.freepik.com/foto-gratis/vestrahorn_181624-24633.jpg",
       nombre: "africano",
-      puesto: "Instructora en Alura Latam",
       fav: true,
     },
     {
+      id:uuid(),
       categoria: "Llanuras",
-      foto: "https://img.freepik.com/foto-gratis/paisaje-naturaleza-montanosa-rio_23-2150705800.jpg?t=st=1720367177~exp=1720370777~hmac=68765d014e573513b7b14229755f5eea64566fae1fcfe40662691bd8d6fccc54&w=996",
-      nombre: "palmpa argentina",
-      puesto: "Head de Alura e Instructor",
+      foto: "https://img.freepik.com/foto-gratis/paisaje-naturaleza-montanosa-rio_23-2150705800.jpg",
+      nombre: "Pampa argentina",
       fav: true,
     },
     {
+      id:uuid(),
       categoria: "Selva",
-      foto: "https://img.freepik.com/foto-gratis/arbol-caido-que-refleja-lago-parque-nacional-monte-rainier-seattle-estado-washington_181624-8631.jpg?t=st=1720376419~exp=1720380019~hmac=eede31cf95e1a069075be0ca14d7926934f7fae5eba8da90f9aa00c5b6695115&w=996",
+      foto: "https://img.freepik.com/foto-gratis/arbol-caido-que-refleja-lago-parque-nacional-monte-rainier-seattle-estado-washington_181624-8631.jpg",
       nombre: "amazonas",
-      puesto: "Dev FullStack",
       fav: false,
     },
   ]);
-  //Registro de videos
-  //const registrarVideo = (card) => {
-  //console.log("registrar video", registrarVideo);
-  //actualizarCards([...Cards, card]);
-  //};
-  //lisata de categorias
+  
+  //lista de categorias
   const [categorias, actualizarCategoria] = useState([
     {
+      id:uuid(),
       titulo: "Nórdico",
-      colorPrimario: "#00C86F",
+      colorPrimario: "#A6D157",
     },
     {
-      titulo: "Mediteraneo",
-      colorPrimario: "#6BD1FF",
+      id:uuid(),
+      titulo: "Mediterraneo",
+      colorPrimario: "#A6D157",
     },
     {
+      id:uuid(),
       titulo: "Montaña",
       colorPrimario: "#A6D157",
     },
     {
+      id:uuid(),
       titulo: "Llanuras",
       colorPrimario: "#A6D157",
     },
     {
+      id:uuid(),
       titulo: "Selva",
       colorPrimario: "#A6D157",
     },
   ]);
 
+  //FUNCIONES ---//------------------------------------------
+
+//Registro de videos
+  const registrarCard = (card) => {
+  console.log("registrar video", registrarCard);
+  actualizarCards([...cards, card]);
+  };
+
+
+  const eliminarCard =(id) => {
+    console.log ("eliminar card:", id)
+    const nuevaCard = cards.filter(card => card.id != id)
+    actualizarCards(nuevaCard)
+  }
+ //
+  const crearCategoria = (nuevaCategoria)=>{
+    console.log(nuevaCategoria);
+  }
+
+
+
+
+ //RETORNO ---//------------------------------------------
   return (
     <div /*className='app'*/>
       <Header />
 
       {
-      categorias.map((categoria) => (
+      categorias.map((categoria) =>
         <Categoria
-         datos={categoria} 
-         key={categoria.titulo} />
-      ))}
+        datos={categoria}
+        key={categoria.titulo}
+        cards={cards.filter(card => card.categoria === categoria.titulo)}
+        eliminarCard={eliminarCard}
+        //crearCategoria={crearCategoria}
+        />
+      )
+      }
+  
       <NuevoVideo
         categorias={categorias.map((categoria) => categoria.titulo)}
-        actualizarCards={actualizarCards}
+        registrarCard={registrarCard}
+        crearCategoria={crearCategoria}
       />
+
       <Footer />
     </div>
   );
