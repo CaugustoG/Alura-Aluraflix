@@ -17,7 +17,7 @@ const NuevoVideo = (props) => {
     const [titulo, actualizarTitulo] = useState("")
 
     //destructuracion
-    const { registrarCards, nuevaCategoria, crearCategoria } = props
+    const { crearCategoria } = props
 
     const manejarEnvio = (e) => {
         e.preventDefault()

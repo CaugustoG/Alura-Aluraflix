@@ -3,7 +3,7 @@ import "./Cards.css"
 
 const Cards = (props) => {
 
-    const {categoria, imagen, nombre, id }= props.datos
+    const { imagen, nombre, id }= props.datos
     const {eliminarCard} = props
 
 
