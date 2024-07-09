@@ -1,6 +1,7 @@
 .card {
     width: 100px;
     margin-bottom: 24px;
+    color: #ffffff;
 }
 
 .miniatura img {
@@ -29,11 +30,8 @@
     min-height: 0%;
     border-radius: 0px 0px 20px 20px;
     display: flex;
-
     justify-content: space-around;
-    flex-direction: row;
-    
-    
+    flex-direction: row;  
 }
 
 .info .accion {

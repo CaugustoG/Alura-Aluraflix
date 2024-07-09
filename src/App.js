@@ -8,7 +8,11 @@ import "./App.css";
 import Header from "./Components/Header";
 import NuevoVideo from "./Components/Nuevo-video";
 import Categoria from "./Components/Categoria";
+import Videos from "./Components/Videos/Videos";
 import Footer from "./Components/Footer";
+import ListaOpciones from "./Components/ListaOpciones/Index";
+
+import ListaCategorias from "./Components/ListaCategorias/ListaCategorias";
 //------------------------------------------
 function App() {
   //HOOKS ---//------------------------------------------
@@ -216,10 +220,11 @@ function App() {
 
   //RETORNO ---//------------------------------------------
   return ( <Router>
+        <Header />
+        <ListaCategorias/>
       <Routes>
-        <Route path="/" element={
+        <Route path="/videos" element={
             <div /*className='app'*/>
-              <Header />
               {categorias.map((categoria) => (
                 <Categoria
                   datos={categoria}
@@ -230,25 +235,26 @@ function App() {
                   crearCategoria={crearCategoria}
                 />
               ))}
-              <Footer />
             </div>
           }
         />
         <Route path="/nuevo-video"
           element={
             <div /*className='app'*/>
-              <Header />
+              
               <NuevoVideo
                 categorias={categorias.map((categoria) => categoria.titulo)}
                 registrarCard={registrarCard}
                 crearCategoria={crearCategoria}
               />
-              <Footer />
+              
             </div>
           }
         />
+        <Route path="/videos/:id" element={<Videos/>}/>
         <Route path="*" element={<h1>Error 404, la página no existe</h1>}/>
       </Routes>
+      <Footer />
     </Router>
   );
 }

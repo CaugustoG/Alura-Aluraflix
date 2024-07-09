@@ -1,8 +1,14 @@
+
 import "./Categoria.css"
 import Cards from "../Cards"
+import { buscar } from "../../api/api"
+import ListaOpciones from "../ListaOpciones/Index"
+import Video from "../Videos/Videos"
+import { useParams } from "react-router-dom"
+import { useState } from "react"
 
 
-const Categoria = (props) => {
+/*const Categoria = (props) => {
 
     //destructuracion del objeto datos
     const { colorPrimario, titulo, } = props.datos
@@ -28,5 +34,26 @@ const Categoria = (props) => {
             </section>
         }
     </>
+}*/
+
+
+const Categoria = ({ url }) => {
+
+    const {category} = useState([])
+
+    const {id} = useParams
+
+    return (
+        <>
+            <div>
+                <Cards url={"/videos"} />
+            </div>
+            
+        </>
+
+
+    )
 }
+
+
 export default Categoria

@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom"
+
 import "./Header.css"
+import Boton from "../Boton"
 
 function Header() {
     return <header className="header">
@@ -7,6 +10,13 @@ function Header() {
         <div className="titulo">
             <h2>Descubre los paisajes mas hermosas e impactantes del universo</h2>
         </div>
+        <nav>
+            <span>
+                <Link to="/home"><Boton texto="Home"/></Link>
+                <Link to="/Nuevo-video"><Boton texto="Nuevo video" /></Link>
+                <Link to="/videos"><Boton texto="videos"/></Link>
+            </span>  
+        </nav>
     </header>
 }
 
