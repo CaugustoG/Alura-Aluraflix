@@ -1,6 +1,6 @@
 body {
   background-color: #1d1c1c;
   width: 100%;
-  margin: 0;
+  min-width: 440px;
   font-family: "Montserrat", sans-serif;
 }

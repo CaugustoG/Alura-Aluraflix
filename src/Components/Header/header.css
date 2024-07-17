@@ -3,17 +3,18 @@
     text-align: center;
 }
 
-.header img {
-    max-width: 100%;
+.banner {
+    width: 100%;
 }
 
-.logo{
+.logo {
     width: 350px;
     position: relative;
     top:-32px
 }
 
 .titulo h2 {
+    width: 80%;
     color: #ffffff;
     font-size: 45px;
     font-weight: bold;
@@ -27,5 +28,3 @@
     position: absolute;
     top:40px
 }
-
-

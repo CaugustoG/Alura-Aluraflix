@@ -1,24 +1,40 @@
 .card {
-    width: 100px;
-    margin-bottom: 24px;
+    width: 450px;
+    margin: 8px;
     color: #ffffff;
+    display:flex;
+    
+    box-sizing: border-box;
+}
+
+.title{
+    width: 450px;
+    font-size: 14px;
+    text-align: center;
+    color: aqua;
+}
+
+.miniatura {
+    width: 450px;
+    border-radius: 20px 20px 0px 0px;
+    margin:  0px;
+    display:flex;
 }
 
 .miniatura img {
     width: 450px;
-    box-sizing: border-box;
     border-radius: 20px 20px 0px 0px;
     margin:  0px;
-}
+    }
 
 .miniatura h4 {
     font-family: "Montserrat", sans-serif;
     color: #ffffff;
     font-size: 24px;
-    line-height: 0px;
+    line-height: 50px;
     font-weight: 400;
     margin: 24px 8px;
-    text-align: left; 
+     
 }
 
 

@@ -19,10 +19,10 @@ import { buscar } from "../../api/api"
 
     
     return(
-      <main className = "container flex flex--center">
-        <article className = "card post">
-          <h2 className = "post-card__title">{video.title}</h2>
-          <p className = "text__card">{video.description}</p>
+      <main>
+        <article>
+          <h2>{video.title}</h2>
+          <p>{video.description}</p>
           <p className = "video__card">{video.link}</p>
         </article>
       </main>

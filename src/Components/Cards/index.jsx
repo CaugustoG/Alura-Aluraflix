@@ -43,20 +43,17 @@ const Cards = ({ url }) => {
         <section className="cards">
             {
                 videos.map(video => {
-                    const {id, title, category, photo, link, description} = video;
+                    const { id, title, category, photo, link, description } = video;
 
                     return <Link to={`/videos/${id}`} className="miniatura" key={id}>
                         <article >
-                            <img src={photo} alt={title} />
-                            <h4>
+                            <h4 className="titulo">
                                 {title}
                             </h4>
-                            <h2>
-                                {category}
-                            </h2>
-                            <p>{description}</p>
+                            <img src={photo} alt={title} />
+
                             <div className="info">
-                                <div className="accion" 
+                                <div className="accion"
                                 /*onClick={() => eliminarCard(id)}*/
                                 >
                                     <img src={"/img/VectorBorrar.png"} alt="borrar" />

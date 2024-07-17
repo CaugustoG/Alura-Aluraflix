@@ -16,7 +16,7 @@ const ListaCategorias = () => {
             {
                 categorias.map(categoria => (
                     <Link to={`/categorias/${categoria.id}`} key={categoria.id}>
-                        <li className={`${categoria.id}`}>
+                        <li className="lista">
                             {categoria.category}
                         </li>
                     </Link>

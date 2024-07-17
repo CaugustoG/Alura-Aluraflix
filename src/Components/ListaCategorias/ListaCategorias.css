@@ -1,0 +1,25 @@
+.category-list {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.lista {
+    background-color: #bf3f3f;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    padding: 18px 60px;
+    border: none;
+    color: #ffffff;
+    margin: 32px 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.lista:hover{
+    background-color: #832424ef;
+    color:#d1a3a3
+}
